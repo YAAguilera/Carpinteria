@@ -4,13 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        base: "#131221",
-        "base-light": "#353D57",
-        light: "#A9CAEF",
-        primary: "#8181D7",
-        secondary: "#0038FF",
-        NameColor: "rgba(99, 94, 193, 1)",
-        base2: "rgba(29, 29, 43, 1)",
+        yellow: "#FDC835",
+        silver: "#C2C2C2",
+        platin: "#E6E8E6",
       },
       screens: {
         'xs': '0px',
