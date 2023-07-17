@@ -2,7 +2,11 @@ import React from 'react'
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <main className='bg-black w-full h-full'>
+    <section >
+ <p className='text-yellow'> Servicios</p>
+    </section>
+    </main>
   )
 }
 
