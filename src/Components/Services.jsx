@@ -8,6 +8,6 @@ const Services = () => {
     </section>
     </main>
   )
-}
+} 
 
 export default Services
