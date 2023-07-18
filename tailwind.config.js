@@ -3,9 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      // fontFamily: {
-      //   alegreya: ["Alegreya", "sans-serif"],
-      // },
+      fontFamily: {
+        alegreya: ["Alegreya", "sans-serif"],
+      },
       colors: {
         yellow: "#FDC835",
         silver: "#C2C2C2",
