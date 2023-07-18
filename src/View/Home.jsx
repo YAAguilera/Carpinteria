@@ -8,7 +8,7 @@ const Home = () => {
      <section className='overflow-x-hidden'>
       <Nav/>
       <Landing/>
-      {/* <Services/> */}
+      <Services/>
      </section>
     </main>
   )
