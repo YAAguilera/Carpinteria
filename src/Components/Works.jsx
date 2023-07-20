@@ -56,7 +56,7 @@ const Works = () => {
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: true,
-              }}
+              }} 
               pagination={{clickable: true}}
               scrollbar={{draggable: true}}
               spaceBetween={space}
