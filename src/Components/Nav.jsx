@@ -40,17 +40,17 @@ const Nav = () => {
     >
       {window.innerWidth <= 640 ? (
         <>
-        <section className='flex flex-row justify-center items-center align-middle gap-4'>
+        <section className='flex flex-row items-center align-middle gap-4 justify-around'>
           <div >
             <img src={logo} alt="logo" className='h-[6em] w-[6em] cursor-pointer' />
-          </div>
+          </div> 
           <div className='bg-yellow '>
             <UseAnimations animation={menu2} onClick={toggleMenu} />
           </div>
           </section>
         </>
       ) : (
-        <div className='flex flex-row w-full justify-center items-center align-middle text-yellow font-semibold italic 
+        <div className='flex flex-row w-full justify-center items-center align-middle text-yellow font-semibold italic text-center
         xxl:gap-[10%] xxl:text-3xl 
         xl:gap-[10%] xl:text-xl 
         lg:gap-[10%] lg:text-lg
@@ -69,13 +69,15 @@ const Nav = () => {
           <button className='hover:underline'>Galería</button>
         </Link>
 
-        <Link
-        to='landing'
-        smooth={true}
-        duration={700}
-        >
-        <img src={logo} alt="logo" className='h-[6em] w-[6em] cursor-pointer'/>
-        </Link>
+        <div className='flex justify-center'> {/* Contenedor del logotipo con flexbox para centrarlo */}
+          <Link
+            to='landing'
+            smooth={true}
+            duration={700}
+          >
+            <img src={logo} alt="logo" className='h-[6em] w-[6em] cursor-pointer'/>
+          </Link>
+        </div>
 
         <Link>
           <button className='hover:underline'>Contacto</button>
@@ -83,7 +85,7 @@ const Nav = () => {
 
         <Link
         >
-          <button className='w-[6em] hover:underline'>Preguntas frecuentes</button>
+          <button className=' hover:underline w-[4em] bg-white'>Preguntas frecuentes</button>
         </Link>
 
       </div>
