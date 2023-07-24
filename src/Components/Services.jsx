@@ -4,11 +4,11 @@ import rest from '../assets/restauracion.webp'
 import ab from '../assets/aberturas.webp'
 const Services = () => {
   return (
-    <main id='service' className='bg-platin w-full h-full'>
+    <main  id='service' className='bg-platin w-full h-full'>
     <section className='flex justify-center items-center flex-col gap-6' >
-    <h1 className='text-black p-[3%]  
+    <h1 className='text-black pt-[7%] pb-10  
     xl:text-5xl lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl font-alegreya underline decoration-solid decoration-yellow'>Nuestros servicios</h1>
-    <article className='pb-10 flex xxl:flex-row xl:flex-row lg:flex-row md:flex-col sm:flex-col xs:flex-col xxl:gap-40 xl:gap-40 lg:gap-20 md:gap-10'>
+    <article  className='pb-10 flex xxl:flex-row xl:flex-row lg:flex-row md:flex-col sm:flex-col xs:flex-col xxl:gap-40 xl:gap-40 lg:gap-20 md:gap-10'>
       {/* muebles */}
     <figure className='w-[17em] transition-all duration-500 ease-out hover:scale-105 shadow-2xl shadow-black relative h-[25em] rounded-t-md bg-white overflow-hidden'>
       <img src={ex} className="rounded-t-md" alt="muebles" />
