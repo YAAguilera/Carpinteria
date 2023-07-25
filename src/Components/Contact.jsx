@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'
 
-const Contact = () => {
-  return (
-    <main id='contact' className='w-screen h-full bg-yellow'>
-        <h1>Contact</h1>
-    </main>
-  )
-}
-
-export default Contact
-=======
 import React from 'react'
 import FAQ from './Faq/FaqComp'
 import { BsWhatsapp, BsFillTelephoneFill } from "react-icons/bs";
@@ -31,7 +19,7 @@ const Pyr = () => {
         </figure>
         <figure className='flex flex-row justify-center items-center gap-3 '>
           <BsFillTelephoneFill className='text-6xl'/>
-          <h1 className='text-3xl'>+54 3407 1234-56</h1>
+          <h1 className='text-3xl'>+54 3407 40-1131</h1>
         </figure>
       </article>
       <FAQ/>  
@@ -41,4 +29,3 @@ const Pyr = () => {
 }
 
 export default Pyr
->>>>>>> main

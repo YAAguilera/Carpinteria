@@ -36,7 +36,7 @@ const Nav = () => {
   return (
     <header
       className='bg-black w-screen fixed top-0 left-0 right-0 z-20
-      xxl:h-[10em] xl:h-[6em] lg:h-[6em] md:h-[6em] sm:h-[6em] xs:h-[6em]'
+      xxl:h-[10em] xl:h-[7em] lg:h-[6em] md:h-[6em] sm:h-[6em] xs:h-[6em]'
     >
       {window.innerWidth <= 640 ? (
         <>
@@ -65,7 +65,7 @@ const Nav = () => {
           <button className='hover:underline'>Servicios</button>
         </Link>
 
-        <Link>
+        <Link to='galeria'>
           <button className='hover:underline'>Galería</button>
         </Link>
 
@@ -79,13 +79,12 @@ const Nav = () => {
           </Link>
         </div>
 
-        <Link>
+        <Link to='contact'>
           <button className='hover:underline'>Contacto</button>
         </Link>
 
-        <Link
-        >
-          <button className=' hover:underline w-[4em] bg-white'>Preguntas frecuentes</button>
+        <Link to='contact'>
+          <button className=' hover:underline w-[4em] '>Preguntas frecuentes</button>
         </Link>
 
       </div>
@@ -110,7 +109,7 @@ const Nav = () => {
             <button className='hover:underline my-2'>Contacto</button>
           </Link>
 
-          <Link>
+          <Link onClick={closeMenu}>
             <button className='w-[6em] hover:underline my-2'>Preguntas frecuentes</button>
           </Link>
         </div>
