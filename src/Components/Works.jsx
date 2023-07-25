@@ -45,11 +45,11 @@ const Works = () => {
     };
   }, []);
   return (
-    <main id='galeria' className='bg-platin w-full h-screen'>
-        <section className='flex justify-center items-center flex-col gap-3'>
-        <h1 className='text-black pt-[3%]
+    <main id='galeria' className='bg-platin w-full h-full'>
+        <section className='flex justify-center items-center flex-col gap-[4em] pb-[10em]'>
+        <h1 className='text-black xxl:pt-[10%] xl:pt-[10%] lg:pt-[10%] md:pt-[10%] sm:pt-[20%] xs:pt-[25%]
     xl:text-5xl lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl font-alegreya underline decoration-solid decoration-yellow'>Galeria</h1>
-            <article className='w-full p-10 h-full '>
+            <article className='w-full h-full '>
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               navigation

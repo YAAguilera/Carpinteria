@@ -69,7 +69,11 @@ const Nav = () => {
           <button className={activeLink === 'service' ? 'underline my-2' : 'hover:underline my-2'}>Servicios</button>
         </Link>
 
-        <Link to='galeria'>
+        <Link 
+        to='galeria'
+        smooth={true}
+        duration={700}
+        >
           <button className={activeLink === 'galeria' ? 'underline my-2' : 'hover:underline my-2'}>Galería</button>
         </Link>
 
@@ -83,11 +87,18 @@ const Nav = () => {
           </Link>
         </div>
 
-        <Link to='contact'>
+        <Link 
+        to='contact'
+        smooth={true}
+        duration={700}
+        >
           <button className={activeLink === 'contact' ? 'underline my-2' : 'hover:underline my-2'}>Contacto</button>
         </Link>
 
-        <Link to='contact'>
+        <Link to='contact'
+        smooth={true}
+        duration={700}
+        >
           <button className={activeLink === 'contact' ? 'underline my-2 w-16' : 'hover:underline my-2 w-16'}>Preguntas frecuentes</button>
         </Link>
 
