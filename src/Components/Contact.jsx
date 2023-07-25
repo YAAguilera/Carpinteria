@@ -4,7 +4,7 @@ import { BsWhatsapp, BsFillTelephoneFill } from "react-icons/bs";
 
 const Pyr = () => {
   return (
-    <main className='bg-yellow h-auto w-screen'>
+    <main id='contact' className='bg-yellow h-auto w-screen'>
       <section className='flex flex-row gap-10 justify-center items-center pb-11'>
       <article className='flex relative flex-col items-center h-auto gap-5'>
         <h1 className='text-4xl  text-center font-extrabold underline decoration-solid text-black'>¿Como contactarnos?</h1>

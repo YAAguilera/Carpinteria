@@ -10,12 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
+    "feather-icons": "^4.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.2",
     "react-scroll": "^1.8.9",
-    "react-useanimations": "^2.10.0",
     "swiper": "^10.0.4"
   },
   "devDependencies": {
@@ -33,4 +34,3 @@
     "vite": "^4.4.0"
   }
 }
- 

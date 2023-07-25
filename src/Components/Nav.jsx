@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import logo from '../assets/logocarp 2.svg';
-import UseAnimations from 'react-useanimations';
-import menu2 from 'react-useanimations/lib/menu2';
+import { FiMenu } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 
 const Nav = () => {
   const [activeLink, setActiveLink] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+ 
   const handleSetActive = (to) => {
     setActiveLink(to);
   };
@@ -35,17 +35,21 @@ const Nav = () => {
 
   return (
     <header
-      className='bg-black w-screen fixed top-0 left-0 right-0 z-20
-      xxl:h-[10em] xl:h-[7em] lg:h-[6em] md:h-[6em] sm:h-[6em] xs:h-[6em]'
+      className='bg-black w-screen fixed top-0 left-0 right-0 z-20 
+      xxl:h-[10em] xl:h-[7em] lg:h-[7em] md:h-[6em] sm:h-[6em] xs:h-[6em]'
     >
       {window.innerWidth <= 640 ? (
         <>
-        <section className='flex flex-row items-center align-middle gap-4 justify-around'>
+        <section className='flex flex-row items-center align-middle justify-around'>
           <div >
             <img src={logo} alt="logo" className='h-[6em] w-[6em] cursor-pointer' />
           </div> 
-          <div className='bg-yellow '>
-            <UseAnimations animation={menu2} onClick={toggleMenu} />
+          <div className='text-yellow text-3xl'>
+          {isMenuOpen ? (
+                <FiX onClick={toggleMenu} />
+              ) : (
+                <FiMenu onClick={toggleMenu} />
+              )}
           </div>
           </section>
         </>
@@ -62,11 +66,11 @@ const Nav = () => {
         smooth={true}
         duration={700}
         >
-          <button className='hover:underline'>Servicios</button>
+          <button className={activeLink === 'service' ? 'underline my-2' : 'hover:underline my-2'}>Servicios</button>
         </Link>
 
         <Link to='galeria'>
-          <button className='hover:underline'>Galería</button>
+          <button className={activeLink === 'galeria' ? 'underline my-2' : 'hover:underline my-2'}>Galería</button>
         </Link>
 
         <div className='flex justify-center'> {/* Contenedor del logotipo con flexbox para centrarlo */}
@@ -80,11 +84,11 @@ const Nav = () => {
         </div>
 
         <Link to='contact'>
-          <button className='hover:underline'>Contacto</button>
+          <button className={activeLink === 'contact' ? 'underline my-2' : 'hover:underline my-2'}>Contacto</button>
         </Link>
 
         <Link to='contact'>
-          <button className=' hover:underline w-[4em] '>Preguntas frecuentes</button>
+          <button className={activeLink === 'contact' ? 'underline my-2 w-16' : 'hover:underline my-2 w-16'}>Preguntas frecuentes</button>
         </Link>
 
       </div>
@@ -101,16 +105,28 @@ const Nav = () => {
             <button className='hover:underline my-2'>Servicios</button>
           </Link>
 
-          <Link onClick={closeMenu}>
+          <Link 
+          to='galeria'
+          smooth={true}
+          duration={700}
+          onClick={closeMenu}>
             <button className='hover:underline my-2'>Galería</button>
           </Link>
 
-          <Link onClick={closeMenu}>
+          <Link 
+          to='contact'
+          smooth={true}
+          duration={700}
+          onClick={closeMenu}>
             <button className='hover:underline my-2'>Contacto</button>
           </Link>
 
-          <Link onClick={closeMenu}>
-            <button className='w-[6em] hover:underline my-2'>Preguntas frecuentes</button>
+          <Link 
+          to='contact'
+          smooth={true}
+          duration={700}
+          onClick={closeMenu}>
+            <button className='hover:underline my-2'>Preguntas frecuentes</button>
           </Link>
         </div>
       )}
