@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 const Works = () => {
   const [slidesToShow, setSlidesToShow] = useState(3); // Estado inicial para mostrar 3 imágenes
-  const [space, setSpace] = useState(50)
+  const [space, setSpace] = useState(50) 
 
   useEffect(() => {
     const handleResize = () => {

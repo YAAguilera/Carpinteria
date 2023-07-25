@@ -7,9 +7,9 @@ import Pyr from '../Components/Contact'
 const Home = () => {
   return (
     <main>
-     <section className='overflow-x-hidden'>
+     <section className='overflow-x-hidden'> 
       <Nav/>
-      <Landing/>
+      <Landing/> 
       <Services/>
       <Works/>
       <Pyr/>

@@ -3,27 +3,27 @@ import Faq from "./Faq";
 
 const faqs = [
   {
-    question: "¿Pregunta 1?",
+    question: "¿Cuánto cuesta construir/armar un mueble específico?",
     answer:
-      "Respuesta 1.",
+      "El costo varía según el diseño, las medidas y los materiales que se utilicen. Como cada proyecto es único, es necesario analizar los detalles para proporcionar un presupuesto preciso y justo. Por favor, proporciónenos más información sobre su proyecto para ofrecerle una estimación detallada",
     dropKey: "first_faq",
   },
   {
-    question: "¿Pregunta 2?",
+    question: "¿Cuánto tiempo tomará completar mi proyecto?",
     answer:
-      "Respuesta 2",
+      "El tiempo de finalización de su proyecto puede variar debido a nuestra carga de trabajo actual. Sin embargo, estamos comprometidos a brindarle un servicio de calidad. Una vez que revisemos los detalles específicos de su proyecto, podremos acordar una fecha de entrega que se ajuste a sus necesidades",
     dropKey: "second_faq",
   },
   {
-    question: "Pregunta 3?",
+    question: "¿Puedes asesorarme en el diseño y materiales para maximizar el espacio disponible?",
     answer:
-      "Respuesta 3.",
+      "!Absolutamente¡Trabajaremos juntos para crear soluciones funcionales y estéticas que se ajusten a tus necesidades y aprovechen al máximo el espacio.",
     dropKey: "third_faq",
   },
   {
-    question: "¿Pregunta 4?",
+    question: "¿Cuál es tu proceso de trabajo?",
     answer:
-      "Respuesta 4.",
+      "Nuestro proceso de trabajo incluye: escuchar tus ideas, crear un boceto detallado, seleccionar materiales de alta calidad, y una precisa instalación.",
     dropKey: "four_faq",
   },
 ];
