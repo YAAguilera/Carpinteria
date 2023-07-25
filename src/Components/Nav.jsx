@@ -7,7 +7,9 @@ import { FiX } from "react-icons/fi";
 const Nav = () => {
   const [activeLink, setActiveLink] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
- 
+
+  console.log(isMenuOpen);
+
   const handleSetActive = (to) => {
     setActiveLink(to);
   };
@@ -18,7 +20,7 @@ const Nav = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMenuOpen(window.innerWidth <= 640);
+      setIsMenuOpen(false); // No establecer el estado basado en el tamaño de la ventana aquí
     };
 
     handleResize();
@@ -32,6 +34,7 @@ const Nav = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
 
   return (
     <header

@@ -25,16 +25,18 @@ const Works = () => {
       } else if (window.innerWidth >= 768) {
         setSlidesToShow(2); // md
         setSpace(50); // Reducir espacio entre imágenes
-      } else if (window.innerWidth >=640){
+      } else if (window.innerWidth >= 640) {
         setSlidesToShow(2); // md
-        setSpace(10)
-      }
-      else
-      {
+        setSpace(10);
+      } else {
         setSlidesToShow(1); // sm, xs
         setSpace(0); // Reducir espacio entre imágenes aún más
       }
+      console.log(window.innerWidth);
     };
+
+    // Ejecutar la función al montar el componente y cada vez que cambie el tamaño de la ventana
+    handleResize();
 
     // Escuchar el evento de cambio de tamaño de la ventana
     window.addEventListener('resize', handleResize);
