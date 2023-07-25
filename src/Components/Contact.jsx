@@ -1,4 +1,3 @@
-
 import React from 'react'
 import FAQ from './Faq/FaqComp'
 import { BsWhatsapp, BsFillTelephoneFill } from "react-icons/bs";
