@@ -8,29 +8,27 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 const Works = () => {
   const [slidesToShow, setSlidesToShow] = useState(3); // Estado inicial para mostrar 3 imágenes
-  const [space, setSpace] = useState(50) 
 
   useEffect(() => {
     const handleResize = () => {
       // Actualizar el número de imágenes a mostrar según el tamaño de la pantalla
       if (window.innerWidth >= 1883) {
         setSlidesToShow(3); // xxl
-        setSpace(50); // Restablecer espacio entre imágenes
+
       } else if (window.innerWidth >= 1280) {
         setSlidesToShow(3); // xl
-        setSpace(50); // Restablecer espacio entre imágenes
+
       } else if (window.innerWidth >= 1024) {
         setSlidesToShow(3); // lg
-        setSpace(25); // Restablecer espacio entre imágenes
+
       } else if (window.innerWidth >= 768) {
         setSlidesToShow(2); // md
-        setSpace(50); // Reducir espacio entre imágenes
+
       } else if (window.innerWidth >= 640) {
         setSlidesToShow(2); // md
-        setSpace(10);
+
       } else {
         setSlidesToShow(1); // sm, xs
-        setSpace(0); // Reducir espacio entre imágenes aún más
       }
       console.log(window.innerWidth);
     };
@@ -47,36 +45,40 @@ const Works = () => {
     };
   }, []);
   return (
-    <main id='galeria' className='bg-platin w-full h-full'>
-        <section className='flex justify-center items-center flex-col gap-[4em] pb-[10em]'>
-        <h1 className='text-black xxl:pt-[10%] xl:pt-[10%] lg:pt-[10%] md:pt-[10%] sm:pt-[20%] xs:pt-[25%]
-    xl:text-5xl lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl font-alegreya underline decoration-solid decoration-yellow'>Galeria</h1>
-            <article className='w-full h-full '>
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              navigation
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: true,
-              }} 
-              pagination={{clickable: true}}
-              scrollbar={{draggable: true}}
-              spaceBetween={space}
-              slidesPerView={slidesToShow}
-              onSlideChange={() => console.log('slide change')}
-              onSwiper={(swiper) => console.log(swiper)}
-            >
-              {slides.map((slide)=>{
-                return(
-                  <SwiperSlide key={slide.image}>
-                <img className='xxl:w-[25em] xxl:h-[25em] xl:w-[25em] xl:h-[25em] lg:w-[20em] lg:h-[20em] md:w-[20em] md:h-[20em] sm:w-[15em] sm:h-[15em] xs:w-[20em] xs:h-[20em] rounded-md hover:shadow-black  ' src={slide.image} alt={slide.Descripicion} />
-                
-                </SwiperSlide>
-                )
-              })}
-               </Swiper>
-            </article>
-        </section>
+<main id='galeria' className='bg-platin w-full h-full'>
+      <section className='flex justify-center items-center flex-col gap-[4em] pb-[10em]'>
+        <h1 className='text-black xxl:pt-[10%] xl:pt-[10%] lg:pt-[10%] md:pt-[10%] sm:pt-[20%] xs:pt-[25%] xl:text-5xl lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl font-alegreya underline decoration-solid decoration-yellow'>
+          Galeria
+        </h1>
+        <article className='flex relative px-20 justify-center items-center w-full h-full'>
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            navigation
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: true,
+            }}
+            spaceBetween={50}
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            slidesPerView={slidesToShow}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {slides.map((slide) => (
+              <SwiperSlide key={slide.image}>
+                <div className='flex justify-center items-center h-full'>
+                  <img
+                    className='xxl:w-[25em] xxl:h-[25em] xl:w-[25em] xl:h-[25em] lg:w-[20em] lg:h-[20em] md:w-[20em] md:h-[20em] sm:w-[15em] sm:h-[15em] xs:w-[20em] xs:h-[20em] rounded-md hover:shadow-black'
+                    src={slide.image}
+                    alt={slide.Descripicion}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </article>
+      </section>
     </main>
   )
 }

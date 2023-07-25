@@ -7,8 +7,7 @@ import { FiX } from "react-icons/fi";
 const Nav = () => {
   const [activeLink, setActiveLink] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  console.log(isMenuOpen);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
 
   const handleSetActive = (to) => {
     setActiveLink(to);
@@ -18,9 +17,14 @@ const Nav = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   useEffect(() => {
     const handleResize = () => {
-      setIsMenuOpen(false); // No establecer el estado basado en el tamaño de la ventana aquí
+      setIsMobile(window.innerWidth <= 640);
+      setIsMenuOpen(false); // Siempre cerramos el menú al cambiar el tamaño de la ventana
     };
 
     handleResize();
@@ -30,12 +34,6 @@ const Nav = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
-
   return (
     <header
       className='bg-black w-screen fixed top-0 left-0 right-0 z-20 
@@ -49,10 +47,10 @@ const Nav = () => {
           </div> 
           <div className='text-yellow text-3xl'>
           {isMenuOpen ? (
-                <FiX onClick={toggleMenu} />
-              ) : (
-                <FiMenu onClick={toggleMenu} />
-              )}
+  <FiX onClick={toggleMenu} />
+) : (
+  <FiMenu onClick={() => setIsMenuOpen(true)} />
+)}
           </div>
           </section>
         </>
