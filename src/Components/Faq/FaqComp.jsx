@@ -50,8 +50,8 @@ const FAQ = () => {
 
   return (
     <section name="faq" className=" flex-col gap-y-4  items-center flex ">
-      <main className=" pt-16 flex flex-col gap-y-6">
-        <h3 className="text-4xl  text-center font-extrabold underline decoration-solid text-black">
+      <main className=" pt-16 flex items-center flex-col gap-y-6">
+        <h3 className="text-4xl   text-center font-extrabold underline decoration-solid text-black">
           Preguntas frecuentes
         </h3>
         {faqs.map((f) => (
