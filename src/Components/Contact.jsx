@@ -21,7 +21,7 @@ const Pyr = () => {
         md:text-4xl
         sm:text-3xl
         xs:text-2xl'>¿Como contactarnos?</h1>
-        <a href="https://wa.me/message/E5VZNPN6CZLCM1">
+        <a href="https://wa.me/message/E5VZNPN6CZLCM1" >
         <BsWhatsapp className='transition-all duration-300 ease-in-out hover:text-green-500
         xxl:text-8xl
         xl:text-8xl
@@ -30,7 +30,17 @@ const Pyr = () => {
         sm:text-8xl 
         xs:text-6xl
         '/>
+        
         </a>
+        <a href='https://wa.me/message/E5VZNPN6CZLCM1' className='
+        xxl:text-xl
+        xl:text-xl
+        lg:text-xl
+        md:text-xl
+        sm:text-xl
+        xs:text-xl
+        underline 
+        decoration-solid'>Click aqui</a>
         <figure className='flex flex-row justify-center items-center gap-3'>
           <div className='bg-black h-[2px] w-32'></div>
           <h1 className='text-3xl'>O</h1>

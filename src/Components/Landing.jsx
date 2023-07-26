@@ -54,7 +54,9 @@ const Landing = () => {
         sm:text-3xl
         xs:text-2xl
         '>¡Déjanos dar vida a tus proyectos de carpintería!</h3>
-        <Link> 
+        <Link to="contact"
+        smooth={true}
+        duration={700}> 
         <button className='font-alegreya font-semibold text-yellow text-center bg-black transition-all duration-500 ease-in-out hover:transform hover:scale-110 rounded-full
         xxl:p-[9%] xxl:text-5xl 
         xl:p-[8%] xl:text-3xl
