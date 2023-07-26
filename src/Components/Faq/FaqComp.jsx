@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "¿Puedes asesorarme en el diseño y materiales para maximizar el espacio disponible?",
     answer:
-      "!Absolutamente! Trabajaremos juntos para crear soluciones funcionales y estéticas que se ajusten a tus necesidades y aprovechen al máximo el espacio.",
+      "¡Absolutamente! Trabajaremos juntos para crear soluciones funcionales y estéticas que se ajusten a tus necesidades y aprovechen al máximo el espacio.",
     dropKey: "third_faq",
   },
   {
